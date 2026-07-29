@@ -11,6 +11,7 @@ import RecipeDetails from './views/RecipeDetails';
 import SavedRecipes from './views/SavedRecipes';
 import Login from './views/Login';
 import Signup from './views/Signup';
+import InformationPage from './views/InformationPage';
 
 // Supabase client import
 import { supabase } from './services/supabaseClient';
@@ -97,6 +98,8 @@ function App() {
           {/* 4. Saved Recipes Page */}
           <Route path="saved" element={<SavedRecipes user={user} />} />
         </Route>
+        {/* 5. Information Pages */}
+        <Route path="info/:page" element={<InformationPage />} />
 
         {/* Catch-all fallback path back to root */}
         <Route path="*" element={<Navigate to="/" replace />} />
