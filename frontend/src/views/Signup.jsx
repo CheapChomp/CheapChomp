@@ -147,7 +147,7 @@ function Signup() {
       <BackgroundPeaches />
       <main style={styles.card}>
         <h2 style={styles.title}>Create Account</h2>
-        <p style={styles.subtitle}>Join BudgetBite to track pantry costs and recipes</p>
+        <p style={styles.subtitle}>Join CheapChomp to track pantry costs and recipes</p>
 
         {/* Dynamic Alerts */}
         {uiError && <div style={styles.errorBox}>⚠️ {uiError}</div>}
