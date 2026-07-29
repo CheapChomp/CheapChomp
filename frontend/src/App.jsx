@@ -97,9 +97,11 @@ function App() {
 
           {/* 4. Saved Recipes Page */}
           <Route path="saved" element={<SavedRecipes user={user} />} />
-        </Route>
-        {/* 5. Information Pages */}
+
+          {/* 5. Information Pages */}
         <Route path="info/:page" element={<InformationPage />} />
+        </Route>
+        
 
         {/* Catch-all fallback path back to root */}
         <Route path="*" element={<Navigate to="/" replace />} />
