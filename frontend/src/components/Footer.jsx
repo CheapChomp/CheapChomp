@@ -26,8 +26,7 @@ function Footer() {
     brandCol: { maxWidth: '320px' },
     logoImg: { height: '32px', width: 'auto', display: 'block' },
     tagline: { color: theme.color.textMuted, marginTop: '8px', fontSize: '0.95em', lineHeight: '1.5' },
-    linksCol: { display: 'flex', flexDirection: 'column', gap: '8px' },
-    colTitle: { color: theme.color.text, fontWeight: '700', fontSize: '0.85em', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '4px' },
+    linksCol: { display: 'flex', flexDirection: 'column', gap: '10px', minWidth: '115px' },
     navLink: {
       background: 'none',
       border: 'none',
@@ -48,7 +47,13 @@ function Footer() {
       gap: '8px',
       color: theme.color.textFaint,
       fontSize: '0.85em'
-    }
+    },
+    linksArea: {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'flex-end',
+  gap: '55px'
+},
   };
 
   const year = new Date().getFullYear();
@@ -61,12 +66,27 @@ function Footer() {
           <p style={styles.tagline}>Find recipes that fit what's already in your pantry — and what's left in your budget.</p>
         </div>
 
-        <div style={styles.linksCol}>
-          <span style={styles.colTitle}>Navigate</span>
-          <button onClick={() => navigate('/')} style={styles.navLink} className="bb-nav-link">Home</button>
-          <button onClick={() => navigate('/recipes')} style={styles.navLink} className="bb-nav-link">Recipes</button>
-          <button onClick={() => navigate('/saved')} style={styles.navLink} className="bb-nav-link">Saved</button>
-        </div>
+        <div style={styles.linksArea}>
+  {/* <div style={styles.linksCol}>
+    <span style={styles.colTitle}>Navigate</span>
+    <button onClick={() => navigate('/')} style={styles.navLink} className="bb-nav-link">Home</button>
+    <button onClick={() => navigate('/recipes')} style={styles.navLink} className="bb-nav-link">Recipes</button>
+    <button onClick={() => navigate('/saved')} style={styles.navLink} className="bb-nav-link">Saved</button>
+  </div> */}
+
+  <div style={styles.linksCol}>
+    <span style={styles.colTitle}>CheapChomp</span>
+    <button onClick={() => navigate('/info/about')} style={styles.navLink} className="bb-nav-link">About</button>
+    <button onClick={() => navigate('/info/goals')} style={styles.navLink} className="bb-nav-link">Our Goals</button>
+    <button onClick={() => navigate('/info/credits')} style={styles.navLink} className="bb-nav-link">Credits</button>
+  </div>
+
+  <div style={styles.linksCol}>
+    <span style={styles.colTitle}>Information</span>
+    <button onClick={() => navigate('/info/privacy')} style={styles.navLink} className="bb-nav-link">Privacy</button>
+    <button onClick={() => navigate('/info/safety')} style={styles.navLink} className="bb-nav-link">Food Safety</button>
+  </div>
+</div>
       </div>
 
       <div style={styles.bottomRow}>
