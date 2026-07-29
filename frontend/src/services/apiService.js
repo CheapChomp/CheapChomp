@@ -1,4 +1,6 @@
-const API_BASE_URL = 'http://localhost:3000'; // Backend server URL
+const { API_BASE_URL } = require('../constants'); // Import the API base URL from the constants file instead of redeclaring it
+
+//const API_BASE_URL = 'http://localhost:3000'; // Backend server URL
 
 // Function to extract recipe ID from the URI
 const extractRecipeId = (uri) => { 

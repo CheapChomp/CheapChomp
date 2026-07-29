@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3001", // Allows frontend to connect
+    origin: process.env.FRONTEND_URL || "http://localhost:3001", // Allows frontend to connect
     methods: ["GET", "POST", "DELETE"],
     credentials: true,
   }),
