@@ -39,6 +39,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.SUPABASE_URL': JSON.stringify(process.env.NEXT_PUBLIC_SUPABASE_URL),
       'process.env.SUPABASE_ANON_KEY': JSON.stringify(process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY),
+      'process.env.API_BASE_URL': JSON.stringify(process.env.API_BASE_URL || 'http://localhost:3000'),
     }),
   ],
   devServer: {
