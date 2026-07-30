@@ -11,6 +11,8 @@ import RecipeDetails from './views/RecipeDetails';
 import SavedRecipes from './views/SavedRecipes';
 import Login from './views/Login';
 import Signup from './views/Signup';
+import ForgotPassword from './views/ForgotPassword';
+import ResetPassword from './views/ResetPassword';
 import InformationPage from './views/InformationPage';
 
 // Supabase client import
@@ -81,6 +83,14 @@ function App() {
           path="/signup" // Public route for the signup page
           element={!user ? <Signup /> : <Navigate to="/" replace />} // If the user is not authenticated, render the Signup component; otherwise, redirect to the root path
         />
+        <Route
+          path="/forgot-password"
+          element={!user ? <ForgotPassword /> : <Navigate to="/" replace />}
+        />
+
+        {/* Keep this route available even after Supabase creates the temporary
+            recovery session used to authorize the password update. */}
+        <Route path="/reset-password" element={<ResetPassword />} />
 
         <Route
           path="/"
