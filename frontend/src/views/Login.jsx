@@ -127,7 +127,7 @@ function Login() {
       <BackgroundPeaches />
       <main style={styles.card}>
         <h2 style={styles.title}>Welcome</h2>
-        <p style={styles.subtitle}>Log in to access your BudgetBite kitchen</p>
+        <p style={styles.subtitle}>Log in to access your CheapChomp kitchen</p>
 
         {/* Display UI Error banner if registration/auth fails */}
         {uiError && <div style={styles.errorBox}>⚠️ {uiError}</div>}
