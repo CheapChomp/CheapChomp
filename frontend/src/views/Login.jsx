@@ -119,6 +119,16 @@ function Login() {
       textDecoration: 'none',
       fontWeight: 'bold',
       marginLeft: '5px'
+    },
+    forgotRow: {
+      textAlign: 'right',
+      margin: '-8px 0 18px'
+    },
+    forgotLink: {
+      color: theme.color.primary,
+      textDecoration: 'none',
+      fontSize: '0.9em',
+      fontWeight: '600'
     }
   };
 
@@ -157,6 +167,12 @@ function Login() {
               className="bb-input"
               required
             />
+          </div>
+
+          <div style={styles.forgotRow}>
+            <Link to="/forgot-password" style={styles.forgotLink} className="bb-text-link">
+              Forgot your password?
+            </Link>
           </div>
 
           <button type="submit" style={styles.submitBtn} className="bb-btn-primary">
