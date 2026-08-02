@@ -1,5 +1,7 @@
 // Dependencies
 const express = require("express");
+const helmet = require("helmet");
+const rateLimit = require("express-rate-limit");
 const cors = require("cors"); // Enable CORS for all routes
 const recipesRouter = require("./routes/recipes");
 const ingredientsRouter = require("./routes/ingredients");
@@ -8,6 +10,17 @@ const favoritesRouter = require("./routes/favorites");
 const { port } = require("./config");
 
 const app = express();
+
+// Security middleware
+app.use(helmet());
+
+// Rate limit, max 100 requests per 15 minutes
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  message: { error: "Too many requests, please try again later." },
+});
+app.use(limiter);
 
 app.use(
   cors({
