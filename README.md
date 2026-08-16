@@ -2,7 +2,9 @@
  
 CheapChomp is a recipe search and budget app that helps users find recipes based on food in their pantry and estimates costs for the missing ingredients
 
+## Dashboard Page Demo
 ![CheapChomp Dashboard Demo](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExemdxdG1zczBkM2p1Yjc3bGVwbG8xMzR2Yml6YmRhODltdWhmdW1pZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/p7uRVV47h1Nb2pLCY8/giphy.gif)
+## Recipe Page Demo
 ![CheapChomp Recipe Page Demo](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTZtb29kM3Q3czV2cjhjNmsyZ3g4Mmd6MXJyZHN1ajQwNGRwMm01NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dewJE6Xag0a1F6niWW/giphy.gif)
 
 🔗 **Live demo:** [https://cheapchomp.netlify.app](https://cheapchomp.netlify.app)
